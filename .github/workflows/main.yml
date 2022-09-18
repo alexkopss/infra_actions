@@ -5,7 +5,7 @@ on: [push]
 
 jobs:
   tests:
-    # создание изолированного окружения с последней версией Ubuntu 
+    # создание изолированного окружения с последней Ubuntu 
     runs-on: ubuntu-latest
 
     steps:
