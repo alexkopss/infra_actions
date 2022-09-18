@@ -10,11 +10,7 @@ jobs:
 
     steps:
     # Запуск actions checkout — готового скрипта 
-<<<<<<< HEAD
-    # для клонирования репозитория для клонирования репозитория
-=======
     # для клонирования репозитория
->>>>>>> 8e1e69b472ff61ce765bb293ca0c9a297ee0e51b
     - uses: actions/checkout@v2
     - name: Set up Python
       # Запуск actions setup-python — готового скрипта 
@@ -23,7 +19,6 @@ jobs:
       with:
         # Выбор версии Python
         python-version: 3.7
-<<<<<<< HEAD
 
     - name: Install dependencies
       run: | 
@@ -38,21 +33,3 @@ jobs:
       run: |
         # запуск проверки проекта по flake8
         python -m flake8
-
-
-=======
-
-    - name: Install dependencies
-      run: | 
-        # обновление pip
-        python -m pip install --upgrade pip 
-        # установка flake8 и его плагинов
-        pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
-        # установка зависимостей
-        pip install -r requirements.txt 
-
-    - name: Test with flake8 and django tests
-      run: |
-        # запуск проверки проекта по flake8
-        python -m flake8
->>>>>>> 8e1e69b472ff61ce765bb293ca0c9a297ee0e51b
